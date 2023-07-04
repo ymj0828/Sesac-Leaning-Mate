@@ -8,7 +8,7 @@
   position: relative;
   width: 95%;
   height: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 .top_container .top_inner header {
@@ -17,7 +17,7 @@
   border-radius: 0 0 15px 15px;
   height: 80px;
   background-color: #fff;
-  padding: 15px 30px;
+  padding: 15px 50px;
   box-sizing: border-box;
   justify-content: space-between;
 }
@@ -32,7 +32,11 @@
   cursor: pointer;
 }
 .top_container .top_inner header .franchise_btn {
-  
+  border-radius: 20px;
+  padding: 10px 30px;
+  background: #00A5B1;
+  color: #fff;
+  cursor: pointer;
 }
 .top_container .top_inner .top_txt_wrap {
   position: absolute;
@@ -56,7 +60,7 @@ section {
 section .sec_inner_wrap{
   display: flex;
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1600px;
 }
 section .sec_desc_wrap {
   margin-right: 50px;
@@ -64,7 +68,7 @@ section .sec_desc_wrap {
 }
 section .sec_desc_wrap .sec_tit {
   flex: 1;
-  margin: 0px 0 50px;
+  margin-bottom: 50px;
   font-weight: bold;
   font-size: 20px;
 }
@@ -128,4 +132,61 @@ section .sec_cont_wrap {
   text-align: center;
   font-size: 18px;
   line-height: 1.2;
+}
+.menu_sec {
+  padding: 0;
+  background-color: rgba(215, 222, 171, 0.6);
+}
+.menu_sec li{
+  height: 100vh;
+}
+.menu_sec .sec_cont_wrap {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+}
+.menu_sec .sec_cont_wrap li {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  transition: .5s;
+}
+.menu_sec .sec_cont_wrap li:first-child {
+  background: url(../img/menu_sec_1.jpg) no-repeat center bottom/cover;
+  top: 0;
+}
+.menu_sec .sec_cont_wrap li:nth-child(2) {
+  background: url(../img/menu_sec_2.jpg) no-repeat center bottom/cover;
+}
+.menu_sec .sec_cont_wrap li:nth-child(3) {
+  background: url(../img/menu_sec_3.jpg) no-repeat center bottom/cover;
+}
+.menu_sec .sec_cont_wrap li:nth-child(4) {
+  background: url(../img/menu_sec_4.jpg) no-repeat center bottom/cover;
+}
+.menu_sec .sec_cont_wrap li:nth-child(5) {
+  background: url(../img/menu_sec_5.jpg) no-repeat center bottom/cover;
+}
+.menu_sec .sec_desc_wrap {
+  margin-right: 0;
+  box-sizing: border-box;
+}
+.menu_sec .sec_desc_wrap li {
+  margin: 0 50px;
+}
+.menu_sec .sec_desc_wrap li .sec_tit {
+  padding-top: 50px;
+  margin-bottom: 10px;
+}
+.menu_sec .sec_desc_wrap li .sec_txt {
+  margin-bottom: 50px;
+}
+.menu_sec .sec_desc_wrap li .item_tit {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.menu_sec .sec_desc_wrap li .item_txt {
+  line-height: 1.5;
 }
