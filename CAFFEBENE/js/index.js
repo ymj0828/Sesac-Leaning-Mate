@@ -1,12 +1,31 @@
 
 window.addEventListener('DOMContentLoaded', () => {
-  const menu_left = document.querySelector('.menu_sec .sec_cont_wrap');
+  const gnb_li = document.querySelectorAll('.gnb>li');
+  
+  gnb_li.forEach((ele)=>{
+    ele.addEventListener('mouseenter', ()=>{
+      ele.children[0].style.display = 'block'
+      console.log(ele.children)
+    })
+    ele.addEventListener('mouseleave', ()=>{
+      ele.children[0].style.display = 'none'
+      console.log(ele.children)
+    })
+  })
+
+
+
+
+  const bean_slide_li = document.querySelectorAll('.bean_slide li');
   
   const bean_sec = document.querySelector('.bean_sec')
   const bean_sec_inner = document.querySelector('.bean_sec .sec_inner_wrap')
   const menu_right_li = document.querySelectorAll('.menu_sec .sec_desc_wrap li')
   const menu_left_li = document.querySelectorAll('.menu_sec .sec_cont_wrap li');
+
+
   
+  bean_sec_inner.style.paddingTop = `${(window.innerHeight - bean_sec_inner.clientHeight) / 2}px`
   let sum = 0;
   console.log(bean_sec.getBoundingClientRect().y)
   window.addEventListener('scroll', (e)=>{
@@ -15,16 +34,16 @@ window.addEventListener('DOMContentLoaded', () => {
   // });
     // console.log(window.scrollY)
     // console.log(bean_sec_inner.offsetTop)
-    console.log(bean_sec.getBoundingClientRect().y / 20)
+    // console.log(bean_sec.getBoundingClientRect().y / 20)
     // if(bean_sec.getBoundingClientRect().y == 1){
     // }
     if(window.scrollY == bean_sec_inner.offsetTop){
-      bean_sec_inner.style.transform = `translateX(${bean_sec.getBoundingClientRect().y / 20}%)`
+      sum+= -40
+      console.log(bean_sec.getBoundingClientRect().y)
+      bean_sec_inner.style.transform = `translateX(${bean_sec.getBoundingClientRect().y}px)`
+      // bean_sec_inner.style.transform = `translateX(${sum}px)`
 
     }
-
-
-
     // console.log(bean_sec.getBoundingClientRect().y)
     // console.log(bean_sec.offsetTop)
     // if(bean_sec.getBoundingClientRect().y <= 100 && bean_sec.getBoundingClientRect().y >= -100){
@@ -32,8 +51,8 @@ window.addEventListener('DOMContentLoaded', () => {
     // }
 
 
+
     // console.log(e.deltaY)
-    // console.log(window.innerHeight)
     // console.log(menu_left.getBoundingClientRect().y);
     // window.scrollTo(0,0)
     // menu_left.style.top = 0
