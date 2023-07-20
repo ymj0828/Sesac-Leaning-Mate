@@ -1,23 +1,46 @@
 
 window.addEventListener('DOMContentLoaded', () => {
   const gnb_li = document.querySelectorAll('.gnb>li');
+  const gnb_2depth = document.querySelectorAll('.gnb_2depth');
+  let gnb_2depth_height_arr = [];
+
   
-  gnb_li.forEach((ele)=>{
+  gnb_li.forEach((ele, index)=>{
     ele.addEventListener('mouseenter', ()=>{
-      ele.children[0].style.display = 'block'
-      console.log(ele.children)
+        // ele.children[0].style.height = `${gnb_2depth_height_arr[index]}`
+        // ele.children[0].style.padding = '20px 10px'
+        console.log(ele.children)
+  
+        console.log(gnb_2depth_height_arr)
+  
+        $(ele.children).slideDown(200)
+  
     })
+
+    // const gnb_2depth_height = window.getComputedStyle(ele1).getPropertyValue('height');
+
+    // gnb_2depth_height_arr[index] = gnb_2depth_height
+    // setTimeout(() => {
+    //   ele1.style.opacity = '1'
+    //   ele1.style.height = '0px'
+    // }, 0.001);
+    
+    // ele1.addEventListener('')
+    
+    // console.log(window.getComputedStyle(ele).getPropertyValue('height'));
     ele.addEventListener('mouseleave', ()=>{
-      ele.children[0].style.display = 'none'
-      console.log(ele.children)
+      $(ele.children).slideUp(200)
     })
   })
+  
 
 
+  
+  
+  
 
 
   const bean_slide_li = document.querySelectorAll('.bean_slide li');
-  
   const bean_sec = document.querySelector('.bean_sec')
   const bean_sec_inner = document.querySelector('.bean_sec .sec_inner_wrap')
   const menu_right_li = document.querySelectorAll('.menu_sec .sec_desc_wrap li')
